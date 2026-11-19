@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Éclat – Test et comparatif des aspirateurs laveurs Dreame</title>
+<meta name="description" content="Test honnête et comparatif des aspirateurs laveurs Dreame : H12 Pro Ultra, G10 Pro, G12 Pro Flex-A et T12 Pro-A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090b10;--ink:#eee8dc;--mut:#8f939d;--gold:#cfae76;--water:#7fa6c9;--line:rgba(238,232,220,.14)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:300 16px/1.65 "Hanken Grotesk",system-ui,sans-serif;overflow-x:hidden;padding-bottom:70px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;line-height:1.05}
+h1{font-size:clamp(2.8rem,8vw,6.4rem);max-width:11ch}
+h2{font-size:clamp(2rem,4.5vw,3.4rem);margin-bottom:1.2rem}
+h3{font-size:1.7rem;font-weight:500}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+nav{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(9,11,16,.7);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.logo{font:500 1.6rem "Cormorant Garamond",serif;letter-spacing:.04em;text-decoration:none}
+nav .links{display:flex;gap:26px;font-size:.92rem}
+nav .links a{text-decoration:none;color:var(--mut)}
+nav .links a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:14px 28px;background:var(--gold);color:#17120a;text-decoration:none;font-weight:500;border-radius:40px 4px 40px 4px;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(207,174,118,.35)}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+:focus-visible{outline:2px solid var(--water);outline-offset:3px}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 60px;overflow:hidden}
+#gl{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;z-index:2}
+.hero p{max-width:46ch;color:#c9c4b8;margin:1.6rem 0 2.2rem;font-size:1.1rem}
+.hero .row{display:flex;gap:14px;flex-wrap:wrap}
+.note{font-size:.8rem;color:var(--mut);margin-top:1.4rem;max-width:60ch}
+.price{font:500 2.4rem "Cormorant Garamond",Georgia,serif;color:var(--gold);line-height:1.1;margin:0 0 .6rem}.price small{font:300 .85rem "Hanken Grotesk",sans-serif;color:var(--mut);margin-left:8px}.flag{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ph,.pimg img{width:100%;aspect-ratio:4/5;object-fit:contain}
+.ph{display:grid;place-items:center;text-align:center;color:var(--mut);font-size:.85rem;background:radial-gradient(circle at 50% 35%,rgba(207,174,118,.16),transparent 60%),linear-gradient(#10131b,#0b0d13);border:1px solid var(--line)}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin:1.6rem 0;border:1px solid var(--line)}
+.specs div{background:var(--bg);padding:16px}
+.specs b{display:block;font:500 1.5rem "Cormorant Garamond",serif;color:var(--gold)}
+.specs span{font-size:.8rem;color:var(--mut)}
+.pc{margin:1.4rem 0 2rem}
+.pc h4{font-weight:500;margin-bottom:.5rem;color:var(--gold)}
+.pc ul{list-style:none;padding:0;font-size:.95rem;color:#c9c4b8}
+.pc li{padding:5px 0 5px 18px;position:relative}
+.pc li:before{content:"+";position:absolute;left:0;color:var(--gold)}
+.pc .con li:before{content:"–";color:var(--water)}
+.quiz{display:flex;flex-wrap:wrap;gap:10px;margin:1.2rem 0}
+.quiz button{font:inherit;color:var(--ink);background:none;border:1px solid var(--line);padding:11px 20px;border-radius:30px;cursor:pointer;transition:.2s}
+.quiz button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+#res{min-height:110px;border-left:2px solid var(--gold);padding:6px 0 6px 22px;max-width:62ch;color:#c9c4b8}
+#res h3{color:var(--ink);margin-bottom:.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.tilt{position:relative;padding:22px;border:1px solid var(--line);border-radius:60px 6px 6px 6px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));transition:transform .15s;transform-style:preserve-3d}
+.tilt:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--mx,50%) var(--my,0%),rgba(207,174,118,.18),transparent 55%)}
+.tilt .ph{aspect-ratio:1;margin-bottom:16px;border-radius:44px 4px 4px 4px}
+.pic{aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);border-radius:44px 4px 4px 4px;background:#10131b}.pic img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;display:block}.pic.light{background:#ece7dc}.pic.light img{object-fit:contain;mix-blend-mode:multiply;padding:6%}.tilt .pic{aspect-ratio:1;margin-bottom:16px}.tilt p{font-size:.92rem;color:var(--mut);margin:.5rem 0 1.1rem}
+.tbl{overflow-x:auto;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:.93rem}
+th,td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 1.15rem "Cormorant Garamond",serif;color:var(--gold)}
+td:first-child{color:var(--mut)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font:400 1.25rem "Cormorant Garamond",serif}
+details p{color:#c9c4b8;margin-top:.7rem;max-width:70ch}
+footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mut);font-size:.85rem}
+.sticky{position:fixed;inset:auto 0 0;z-index:30;display:none;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(9,11,16,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.sticky .btn{display:block;text-align:center}
+@media(max-width:820px){.flag,.pc{grid-template-columns:1fr}nav .links{display:none}.sticky{display:block}section{padding:72px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="#top">Éclat</a><div class="links"><a href="#choix">Notre choix</a><a href="#guide">Quel modèle ?</a><a href="#comparatif">Comparatif</a><a href="#faq">Questions</a></div></nav>
+
+<header class="hero" id="top">
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="wrap">
+<h1>Des sols nets, sans effort.</h1>
+<p>Nous avons lu les fiches et les avis des aspirateurs laveurs Dreame les plus vendus pour vous dire lequel choisir, et ce qui peut décevoir.</p>
+<div class="row"><a class="btn" href="#choix">Voir notre choix</a><a class="btn ghost" href="#comparatif">Comparer les 4 modèles</a></div>
+<p class="note">Édition Black Friday 2026. Les prix indiqués ont été relevés le 18 novembre 2026 sur Amazon.fr et peuvent changer à tout moment pendant le Black Friday.</p>
+</div>
+</header>
+
+<section id="choix"><div class="wrap flag">
+<div class="pimg" id="fimg"></div>
+<div>
+<h2>Dreame H12 Pro Ultra, notre choix</h2>
+<p>Il aspire et lave en un seul passage, puis nettoie lui-même son rouleau à l’eau chaude. C’est le modèle le plus complet pour un usage quotidien.</p>
+<div class="specs">
+<div><b>16 000 Pa</b><span>aspiration</span></div>
+<div><b>60 °C</b><span>lavage du rouleau</span></div>
+<div><b>30 min</b><span>séchage à l’air chaud</span></div>
+<div><b>0,9 L</b><span>réservoir d’eau propre</span></div>
+<div><b>35 min</b><span>d’autonomie</span></div>
+<div><b>5,1 kg</b><span>poids annoncé</span></div>
+</div>
+<div class="pc">
+<div><h4>Ce qu’on aime</h4><ul><li>Nettoyage des deux bords, le long des plinthes</li><li>Rouleau lavé puis séché automatiquement</li><li>Capteur de saleté qui ajuste l’aspiration</li><li>Mode aspiration seule pour les liquides</li></ul></div>
+</div>
+<div class="price">148 € <small>prix constaté le 18 novembre 2026</small></div>
+<p class="note" style="margin:0 0 1.2rem">Prix susceptible de changer pendant le Black Friday. Le prix qui compte est celui affiché sur Amazon au moment de l’achat.</p>
+<a class="btn" id="fcta" target="_blank" rel="sponsored noopener">Voir le prix sur Amazon</a>
+</div></div></section>
+
+<section id="guide"><div class="wrap">
+<h2>Quel modèle pour vous ?</h2>
+<p style="color:var(--mut)">Choisissez votre situation.</p>
+<div class="quiz" role="group" aria-label="Votre situation"></div>
+<div id="res" aria-live="polite"><p>Votre recommandation apparaît ici.</p></div>
+</div></section>
+
+<section id="comparatif"><div class="wrap">
+<h2>Comparatif des 4 modèles</h2>
+<div class="tbl"><table id="tbl"></table></div>
+<p class="note">Données issues des fiches Amazon.fr et des indications du fabricant. *Poids tel que listé sur la fiche Amazon, à confirmer. Prix TTC relevés le 18 novembre 2026 sur Amazon.fr : ils peuvent évoluer pendant le Black Friday.</p>
+</div></section>
+
+<section id="modeles"><div class="wrap">
+<h2>Les modèles en détail</h2>
+<div class="grid" id="cards"></div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<h2>Questions fréquentes</h2>
+<details><summary>Quelle différence avec un aspirateur et une serpillière ?</summary><p>Un aspirateur laveur ramasse les miettes et lave le sol en même temps, puis récupère l’eau sale. Vous faites un passage au lieu de deux.</p></details>
+<details><summary>Sur quels sols l’utiliser ?</summary><p>Les fiches indiquent les sols durs : carrelage, parquet, stratifié, marbre. Pour un autre revêtement, consultez la notice du fabricant.</p></details>
+<details><summary>Les prix affichés sont-ils garantis ?</summary><p>Non. Ils ont été relevés le 18 novembre 2026 sur Amazon.fr et peuvent changer à tout moment à cause du Black Friday. Seul le prix affiché sur Amazon au moment de l’achat compte.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+<p>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises. Les liens de ce site sont des liens d’affiliation : le prix reste le même pour vous.</p>
+<p style="margin-top:12px">Éclat est un site indépendant, non affilié à Dreame. Mentions légales et politique de confidentialité : à compléter.</p>
+</div></footer>
+
+<div class="sticky"><a class="btn" id="scta" target="_blank" rel="sponsored noopener">Voir le H12 Pro Ultra sur Amazon</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const P=[
+{id:'h12',n:'H12 Pro Ultra',px:'148 €',url:'https://link.amazon/B0h4xAmO8',img:'img/h12.webp',bg:'photo',pos:'50% 75%',pa:'16 000 Pa',bat:'35 min',res:'0,9 L',wash:'Rouleau lavé à 60 °C, séché à l’air chaud 30 min',kg:'5,1 kg',d:'Le plus complet pour le quotidien.'},
+{id:'g10',n:'G10 Pro',px:'139 €',url:'https://link.amazon/B01gdeRgV',img:'img/g10.webp',bg:'light',pos:'50% 50%',pa:'16 000 Pa',bat:'35 min',res:'0,9 L',wash:'Rinçage du rouleau en un geste (moins de 3 min)',kg:'8,5 kg*',d:'Une entrée de gamme simple, avec grand écran LED.'},
+{id:'g12',n:'G12 Pro Flex-A',px:'159 €',url:'https://link.amazon/B0fsmX6fo',img:'img/g12.webp',bg:'photo',pos:'50% 50%',pa:'23 000 Pa',bat:'35 min',res:'0,8 L',wash:'Rinçage 60 °C, séchage à 95 °C',kg:'4,1 kg',d:'Léger, avec un racleur conçu pour les poils.'},
+{id:'t12',n:'T12 Pro-A',px:'218 €',url:'https://link.amazon/B0iXx6rAI',img:'img/t12.webp',bg:'light',pos:'50% 50%',pa:'25 000 Pa',bat:'60 min',res:'1 L',wash:'Lavage à 95 °C, séchage à 95 °C',kg:'10,3 kg*',d:'Ultra-fin (9,85 cm) pour passer sous les meubles bas.'}];
+const R={pets:['g12','Poils d’animaux','Le racleur TangleCut 2.0 du G12 Pro Flex-A est conçu pour couper poils et cheveux, avec 23 000 Pa et un poids annoncé de 4,1 kg.'],low:['t12','Meubles bas','Le T12 Pro-A mesure 9,85 cm de haut et se couche à plat pour passer sous lits et canapés bas.'],big:['t12','Grande surface','Le T12 Pro-A annonce 60 min d’autonomie et un réservoir de 1 L, soit jusqu’à 400 m² d’après Dreame.'],all:['h12','Usage quotidien','Le H12 Pro Ultra lave et sèche son rouleau seul, nettoie les deux bords et reste le plus équilibré de la sélection.'],start:['g10','Petit budget','Le G10 Pro reprend l’aspiration de 16 000 Pa du H12 Pro Ultra dans une version plus simple.']};
+const $=s=>document.querySelector(s),by=id=>P.find(p=>p.id===id);
+const img=p=>p.img?`<div class="pic ${p.bg}"><img src="${p.img}" alt="Dreame ${p.n}" style="object-position:${p.pos}" loading="lazy"></div>`:`<div class="ph"><span>Image ${p.n}<br>à venir</span></div>`;
+const lnk=(p,t)=>`<a class="btn" href="${p.url}" target="_blank" rel="sponsored noopener">${t}</a>`;
+$('#fimg').innerHTML=img(by('h12'));
+['#fcta','#scta'].forEach(s=>$(s).href=by('h12').url);
+$('#tbl').innerHTML='<tr><th></th>'+P.map(p=>`<th>${p.n}</th>`).join('')+'</tr>'+
+[['Prix constaté le 18/11/2026','px'],['Aspiration','pa'],['Autonomie','bat'],['Réservoir d’eau propre','res'],['Lavage du rouleau','wash'],['Poids','kg']].map(([l,k])=>`<tr><td>${l}</td>${P.map(p=>`<td>${p[k]}</td>`).join('')}</tr>`).join('')+
+'<tr><td></td>'+P.map(p=>`<td>${lnk(p,'Voir sur Amazon')}</td>`).join('')+'</tr>';
+$('#cards').innerHTML=P.map(p=>`<article class="tilt">${img(p)}<h3>${p.n}</h3><p>${p.d}</p><div class="price" style="font-size:1.8rem">${p.px}</div>${lnk(p,'Voir le prix')}</article>`).join('');
+const q=$('.quiz');
+Object.entries(R).forEach(([k,v])=>{const b=document.createElement('button');b.textContent=v[1];b.setAttribute('aria-pressed','false');b.onclick=()=>{q.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');const p=by(v[0]);$('#res').innerHTML=`<h3>${p.n}</h3><p>${v[2]}</p><p style="margin-top:10px;color:var(--gold)">${p.px} <span style="color:var(--mut);font-size:.85rem">prix constaté, susceptible de changer (Black Friday)</span></p><p style="margin-top:10px">${lnk(p,'Voir le prix sur Amazon')}</p>`};q.appendChild(b)});
+document.querySelectorAll('.tilt').forEach(el=>{el.addEventListener('pointermove',e=>{const b=el.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;el.style.transform=`perspective(800px) rotateY(${x*9}deg) rotateX(${-y*9}deg)`;el.style.setProperty('--mx',(x+.5)*100+'%');el.style.setProperty('--my',(y+.5)*100+'%')});el.addEventListener('pointerleave',()=>el.style.transform='')});
+(function(){const c=$('#gl');if(!window.THREE||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+try{const r=new THREE.WebGLRenderer({canvas:c,alpha:true,antialias:true}),s=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,1,.1,100);cam.position.z=7;
+const m=new THREE.Mesh(new THREE.TorusKnotGeometry(1.5,.4,220,32),new THREE.MeshStandardMaterial({color:0xcfae76,metalness:1,roughness:.16}));s.add(m,new THREE.AmbientLight(0xffffff,.3));
+const a=new THREE.PointLight(0xfff1d0,2.2,0);a.position.set(4,3,5);const b=new THREE.PointLight(0x7fa6c9,1.8,0);b.position.set(-5,-2,3);s.add(a,b);
+const n=innerWidth<700?140:380,p=new Float32Array(n*3).map(()=>(Math.random()-.5)*14),g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(p,3));
+const pts=new THREE.Points(g,new THREE.PointsMaterial({size:.035,color:0x7fa6c9,transparent:true,opacity:.6}));s.add(pts);
+let mx=0,my=0,on=true;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+new IntersectionObserver(e=>on=e[0].isIntersecting).observe(c);
+const rs=()=>{const w=c.clientWidth,h=c.clientHeight,d=w>760;r.setPixelRatio(Math.min(devicePixelRatio,1.5));r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();m.position.x=d?2.4:0;m.scale.setScalar(d?1:.75)};rs();addEventListener('resize',rs);
+(function f(t){if(on){m.rotation.x=t*.0002+my;m.rotation.y=t*.0003+mx*1.5;pts.rotation.y=t*.00006;r.render(s,cam)}requestAnimationFrame(f)})(0)}catch(e){}})();
+</script>
+</body>
+</html>
