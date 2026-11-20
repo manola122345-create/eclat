@@ -169,5 +169,14 @@ new IntersectionObserver(e=>on=e[0].isIntersecting).observe(c);
 const rs=()=>{const w=c.clientWidth,h=c.clientHeight,d=w>760;r.setPixelRatio(Math.min(devicePixelRatio,1.5));r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();m.position.x=d?2.4:0;m.scale.setScalar(d?1:.75)};rs();addEventListener('resize',rs);
 (function f(t){if(on){m.rotation.x=t*.0002+my;m.rotation.y=t*.0003+mx*1.5;pts.rotation.y=t*.00006;r.render(s,cam)}requestAnimationFrame(f)})(0)}catch(e){}})();
 </script>
+<script>
+const GA_ID='G-0LQM0YBPYH';
+(function(){
+window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});
+const sc=document.createElement('script');sc.async=true;sc.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(sc);
+document.addEventListener('click',e=>{const a=e.target.closest('a[href*="link.amazon"]');if(!a)return;const q=P.find(x=>x.url===a.href);gtag('event','click_amazon',{product:q?q.n:'inconnu',link_url:a.href})});
+})();
+</script>
 </body>
 </html>
